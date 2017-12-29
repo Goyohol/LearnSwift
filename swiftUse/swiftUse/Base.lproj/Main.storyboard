@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftUse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-8g-Kgx">
+                                <rect key="frame" x="50" y="220" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.69938151041666663" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O6r-cJ-2Fj"/>
+                                    <constraint firstAttribute="width" constant="135" id="oyn-lf-G28"/>
+                                </constraints>
+                                <state key="normal" title="取消使用键盘"/>
+                                <connections>
+                                    <action selector="clickToQuiteUsingKeyBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSJ-2f-c6J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="storyboard 不考虑状态栏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seb-Tp-VIp">
+                                <rect key="frame" x="50" y="199" width="135" height="20"/>
+                                <color key="backgroundColor" red="1" green="0.79503038194444442" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="cH6-MX-Fgh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.94362372159957886" green="0.21974998712539673" blue="0.028363559395074844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SCu-8g-Kgx" firstAttribute="leading" secondItem="Seb-Tp-VIp" secondAttribute="leading" id="Bb6-Ls-apl"/>
+                            <constraint firstItem="SCu-8g-Kgx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="Oyn-Ol-tIZ"/>
+                            <constraint firstItem="SCu-8g-Kgx" firstAttribute="trailing" secondItem="Seb-Tp-VIp" secondAttribute="trailing" id="VhB-Sb-wZJ"/>
+                            <constraint firstItem="SCu-8g-Kgx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="oYw-Sc-4I5"/>
+                            <constraint firstItem="SCu-8g-Kgx" firstAttribute="top" secondItem="Seb-Tp-VIp" secondAttribute="bottom" constant="1" id="zhj-vR-dE4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quitKeyBoardBtn" destination="SCu-8g-Kgx" id="kK0-I4-mjI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+</document>
