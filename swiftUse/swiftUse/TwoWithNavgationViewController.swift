@@ -8,6 +8,8 @@
 
 import UIKit
 
+import MBProgressHUD
+
 class TwoWithNavgationViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     var dataArr:Array<Any> = []
@@ -20,7 +22,7 @@ class TwoWithNavgationViewController: UIViewController, UITableViewDelegate,UITa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        /** 状态栏 */
+        
         
     }
     
