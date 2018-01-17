@@ -9,7 +9,7 @@ target 'swiftUse' do
 
 pod 'Alamofire'
 pod 'MBProgressHUD'
-
+pod 'Kingfisher', '~> 2.2' #图片处理
 
 
 

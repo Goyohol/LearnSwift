@@ -61,6 +61,8 @@ class InterNetWithAlamofireUseViewController: UIViewController ,UITableViewDeleg
         
         
         
+        
+        
         self.tabV = UITableView.init(frame: CGRect(x: 10, y: 100 + 100+20, width: UIScreen.main.bounds.width - 2*10, height: UIScreen.main.bounds.height - (100 + 100+20) - 100 ), style: UITableViewStyle.plain)
         self.view .addSubview(self.tabV)
         self.tabV.layer.borderColor = UIColor.red.cgColor
