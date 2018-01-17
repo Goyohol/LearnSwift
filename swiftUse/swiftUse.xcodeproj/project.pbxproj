@@ -15,6 +15,7 @@
 		4D1195361FE74D1700C3C911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1195351FE74D1700C3C911 /* Assets.xcassets */; };
 		4D1195391FE74D1700C3C911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1195371FE74D1700C3C911 /* LaunchScreen.storyboard */; };
 		4D1195441FE74D1800C3C911 /* swiftUseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1195431FE74D1800C3C911 /* swiftUseTests.swift */; };
+		4DA41C20200EFD6F00ACA0FD /* InterNetWithAlamofireUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA41C1F200EFD6F00ACA0FD /* InterNetWithAlamofireUseViewController.swift */; };
 		4DDDC0AB1FF3352B00D2E04D /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDC0AA1FF3352B00D2E04D /* AnotherViewController.swift */; };
 		4DDDC0AD1FF3392D00D2E04D /* TwoWithNavgationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDC0AC1FF3392D00D2E04D /* TwoWithNavgationViewController.swift */; };
 		4DDDC0AF1FF3509200D2E04D /* ThreeWithNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDC0AE1FF3509200D2E04D /* ThreeWithNavigationViewController.swift */; };
@@ -45,6 +46,7 @@
 		4D11953F1FE74D1800C3C911 /* swiftUseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftUseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1195431FE74D1800C3C911 /* swiftUseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftUseTests.swift; sourceTree = "<group>"; };
 		4D1195451FE74D1800C3C911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA41C1F200EFD6F00ACA0FD /* InterNetWithAlamofireUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterNetWithAlamofireUseViewController.swift; sourceTree = "<group>"; };
 		4DDDC0AA1FF3352B00D2E04D /* AnotherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		4DDDC0AC1FF3392D00D2E04D /* TwoWithNavgationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoWithNavgationViewController.swift; sourceTree = "<group>"; };
 		4DDDC0AE1FF3509200D2E04D /* ThreeWithNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeWithNavigationViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				4D11952E1FE74D1700C3C911 /* AppDelegate.swift */,
 				4D1195301FE74D1700C3C911 /* ViewController.swift */,
+				4DA41C1F200EFD6F00ACA0FD /* InterNetWithAlamofireUseViewController.swift */,
 				4DDDC0AA1FF3352B00D2E04D /* AnotherViewController.swift */,
 				4DDDC0AC1FF3392D00D2E04D /* TwoWithNavgationViewController.swift */,
 				4DDDC0AE1FF3509200D2E04D /* ThreeWithNavigationViewController.swift */,
@@ -358,6 +361,7 @@
 				4D05DB8F1FEA4ABF00D9A406 /* Student.swift in Sources */,
 				4DDDC0AF1FF3509200D2E04D /* ThreeWithNavigationViewController.swift in Sources */,
 				4DDDC0AB1FF3352B00D2E04D /* AnotherViewController.swift in Sources */,
+				4DA41C20200EFD6F00ACA0FD /* InterNetWithAlamofireUseViewController.swift in Sources */,
 				4D11952F1FE74D1700C3C911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -452,6 +452,8 @@ class ViewController: UIViewController ,UITextFieldDelegate { //添加协议
         
         
         
+        
+        
         /** UI界面 */
         let screenBounds:CGRect = UIScreen.main.bounds  //获取屏幕大小
         
@@ -488,9 +490,25 @@ class ViewController: UIViewController ,UITextFieldDelegate { //添加协议
         
         
         
+        //按钮：Alamofire
+        let interNet_Btn = UIButton.init(frame: CGRect(x: 10, y: rect_Btn.origin.y + rect_Btn.size.height + 100, width: UIScreen.main.bounds.width - 2*10, height: 100))
+        self.view .addSubview(interNet_Btn)
+        interNet_Btn.backgroundColor = UIColor.cyan
+        interNet_Btn .setTitleColor(UIColor.red, for: UIControlState.normal) //标题颜色
+        interNet_Btn.titleLabel?.textAlignment = NSTextAlignment.center //字体居中
+        interNet_Btn.titleLabel?.numberOfLines = 0                              //自动换行
+        interNet_Btn.titleLabel?.lineBreakMode = NSLineBreakMode.byCharWrapping //自动换行
+        interNet_Btn.titleLabel?.adjustsFontSizeToFitWidth = true   //自适应宽度
+        interNet_Btn .setTitle("点击，到新界面\n三方库Alamofire使用", for: UIControlState.normal)
+        interNet_Btn .addTarget(self, action: #selector(presetToInterNetWithAlamofire), for: UIControlEvents.touchUpInside)
         
-        let swiftUseLB = UILabel.init(frame: CGRect(x: 10, y: UIScreen.main.bounds.height - UIScreen.main.bounds.width, width: UIScreen.main.bounds.width - 2*10, height: UIScreen.main.bounds.width))
+        
+        
+        
+        
+        let swiftUseLB = UILabel.init(frame: CGRect(x: 10, y: UIScreen.main.bounds.height - 100-100, width: UIScreen.main.bounds.width - 2*10, height: 100))
         self.view .addSubview(swiftUseLB)
+        swiftUseLB.backgroundColor = UIColor.brown
         swiftUseLB.textAlignment = .center
         swiftUseLB.adjustsFontSizeToFitWidth = true
         swiftUseLB.font = UIFont.boldSystemFont(ofSize: 100)
@@ -505,6 +523,15 @@ class ViewController: UIViewController ,UITextFieldDelegate { //添加协议
             print("present 跳转已完成")
         }
     }
+    
+    func presetToInterNetWithAlamofire() { //跳转到网请界面
+        let interNetVC = InterNetWithAlamofireUseViewController()
+        self .present(interNetVC, animated: true) {
+            print("InterNetWithAlamofireVC   present 跳转已完成")
+        }
+    }
+    
+    
     func dowith() { //按钮点击
         tf .resignFirstResponder();
     }
