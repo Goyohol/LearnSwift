@@ -10,7 +10,9 @@ import UIKit
 
 //引入
 import MBProgressHUD// 进度指示器
-import Alamofire // 网络请求类
+import Alamofire    // 网络请求类
+import Kingfisher   // 图片处理
+
 
 let ExampleURL = "http://www.apiopen.top:88/femaleNameApi?page=1"
 
@@ -57,7 +59,22 @@ class InterNetWithAlamofireUseViewController: UIViewController ,UITableViewDeleg
     
     
     func createUI() {
-        let picImgV = UIImageView.init(frame: CGRect(x: 5, y: UIScreen.main.bounds.height - 100, width: UIScreen.main.bounds.width - 2*5, height: UIScreen.main.bounds.height - 100 ) )
+        //MARK:【一】Kingfisher使用
+        let picImgV = UIImageView.init(frame: CGRect(x: 5, y: UIScreen.main.bounds.height - 100, width: UIScreen.main.bounds.width/2.0 - 2*5, height: 80 ) )
+        self.view .addSubview(picImgV)
+        let url = URL(string: "http://n1.itc.cn/img8/wb/recom/2016/08/12/147100143608807573.GIF") //Gif图片
+        //[A]、网络图片
+//        picImgV .kf.setImage(with: ImageResource.init(downloadURL: url!) )
+        //[B]、网络图片 + 占位图片
+        picImgV .kf.setImage(with: ImageResource.init(downloadURL: url!), placeholder: UIImage.init(named: "gir"), options: [KingfisherOptionsInfoItem.transition(ImageTransition.fade(1)), KingfisherOptionsInfoItem.forceRefresh], progressBlock: nil, completionHandler: nil)
+        
+        let picImgV2 = UIImageView.init(frame: CGRect(x: UIScreen.main.bounds.width/2.0, y: UIScreen.main.bounds.height - 100, width: UIScreen.main.bounds.width/2.0 - 2*5, height: 80 ) )
+        self.view .addSubview(picImgV2)
+        let url2 = URL(string: "ds")
+        //[A]、网络图片
+//        picImgV2 .kf.setImage(with: ImageResource.init(downloadURL: url2!) )
+        //[B]、网络图片 + 占位图片
+        picImgV2 .kf.setImage(with: ImageResource.init(downloadURL: url2!), placeholder: UIImage.init(named: "gir"), options: [KingfisherOptionsInfoItem.transition(ImageTransition.fade(1)), KingfisherOptionsInfoItem.forceRefresh], progressBlock: nil, completionHandler: nil)
         
         
         
@@ -96,7 +113,7 @@ class InterNetWithAlamofireUseViewController: UIViewController ,UITableViewDeleg
     
     
     func netRequest() {
-        
+        //MARK:【二】MBProgressHUD使用
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         //hud.delegate = self as? MBProgressHUDDelegate //设置代理   方法: hudWasHidden
         //MBProgressHUD的常用设置
@@ -107,6 +124,7 @@ class InterNetWithAlamofireUseViewController: UIViewController ,UITableViewDeleg
         
         
         
+        //MARK:【三】Alamofire使用
         Alamofire.request(ExampleURL).responseJSON { response in
             print("请求的URL  response.request:",response.request ?? "no")     //原始的URL请求
             print("请求的响应  response.response:",response.response ?? "no")   //HTTP URL响应
